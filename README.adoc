@@ -1,0 +1,25 @@
+== asciidoctor-fopub-embed-svg-example
+
+An example for embedding SVG images in an asciidoctor document.
+
+=== Setup
+
+----
+bundle install
+----
+
+=== How to make the target pdf file
+
+Running the command below make the target pdf file named "class_diagram.pdf" out of "class_diagram.adoc"
+
+----
+bundle exec rake
+----
+
+=== Watch *.adoc files
+
+Running the command below, rake watches "*.adoc" files and build "*.adoc" files whenever they are modified.
+
+----
+bundle exec rake watch
+----

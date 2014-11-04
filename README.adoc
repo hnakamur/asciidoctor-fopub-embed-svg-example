@@ -29,6 +29,7 @@ bundle exec rake watch
 You can see the example output files at
 
 * https://hnakamur.github.io/asciidoctor-fopub-embed-svg-example/class_diagram.pdf[class_diagram.pdf]
+* https://hnakamur.github.io/asciidoctor-fopub-embed-svg-example/class_diagram.html[class_diagram.html]
 
 === Note
 

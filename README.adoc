@@ -30,3 +30,8 @@ You can see the example output files at
 
 * https://hnakamur.github.io/asciidoctor-fopub-embed-svg-example/class_diagram.pdf[class_diagram.pdf]
 * https://hnakamur.github.io/asciidoctor-fopub-embed-svg-example/class_diagram.html[class_diagram.html]
+
+=== Note
+
+You must be add `width` and `height` attributes to the root `<svg>` element.
+Without these, you got redundant spaces between the embedded image and the following text.

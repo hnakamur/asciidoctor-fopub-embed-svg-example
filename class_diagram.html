@@ -416,66 +416,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <div class="imageblock">
 <div class="content">
-<img src="Vsw9cGkj8bJjEBr6.svg" alt="Vsw9cGkj8bJjEBr6" width="417">
+<img src="Vsw9cGkj8bJjEBr6.svg" alt="Vsw9cGkj8bJjEBr6">
 </div>
 <div class="title">Figure 1. Caption for a SVG diagram</div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>I&#8217;d like to remove a redundant vertical space between the diagram above and the caption.</p>
-</li>
-<li>
-<p>I suppose Height 275 below is too much.</p>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;&lt;
-  /Name /Im7
-  /Type /XObject
-  /Length 29 0 R
-  /Filter /FlateDecode
-  /Subtype /Image
-  /Width 417
-  /Height 275
-  /BitsPerComponent 8
-  /ColorSpace /DeviceGray
-&gt;&gt;</pre>
+<div class="paragraph">
+<p>You must be add <code>width</code> and <code>height</code> attributes to the root <code>&lt;svg&gt;</code> element to avoid
+redundant spaces.</p>
 </div>
-</div>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Vsw9cGkj8bJjEBr6.svg" alt="Vsw9cGkj8bJjEBr6" width="417">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>There is still a redundant vertical space even when I do not have a caption, so the redundant space seems to be inside the image.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="Vsw9cGkj8bJjEBr6.svg" alt="Vsw9cGkj8bJjEBr6" width="417" height="242">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>However, the diagram becomes too small if I set the height as well as the width.</p>
-</li>
-<li>
-<p>And there still exists a redundant vertical space. I&#8217;d like to remove it!</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>In the above example, I added <code>width="441.0" height="265.5"</code>.</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-11-01 09:13:53 JST
+Last updated 2014-11-04 10:40:04 JST
 </div>
 </div>
 </body>

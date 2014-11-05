@@ -14,10 +14,20 @@ rule '.pdf' => '.adoc' do |t|
   dirname = File.dirname t.source
   basename = File.basename t.source, '.adoc'
   xml_file = "#{dirname}/#{basename}.xml"
-  unless File.directory? "./asciidoctor-fopub"
-    sh "git clone https://github.com/asciidoctor/asciidoctor-fopub"
-  end
-  sh "bundle exec asciidoctor -b docbook -d book -r asciidoctor-diagram #{t.source} && ./asciidoctor-fopub/fopub #{xml_file} && open #{t.name}"
+  fopub_path = Gem.bin_path('asciidoctor-fopub', 'fopub')
+  docbook_xsl_ja_path = File.join(File.dirname(File.dirname(fopub_path)), 'src', 'dist', 'docbook-xsl-ja')
+  sh %Q{
+    bundle exec asciidoctor -a lang=ja -b docbook -d book \
+      -r asciidoctor-diagram #{t.source} && \
+    ./vendor/bin/fopub -t #{docbook_xsl_ja_path} #{xml_file} \
+      -param alignment left \
+      -param body.font.family VL-PGothic-Regular \
+      -param dingbat.font.family VL-PGothic-Regular \
+      -param monospace.font.family VL-PGothic-Regular \
+      -param sans.font.family VL-PGothic-Regular \
+      -param title.font.family VL-PGothic-Regular && \
+    open #{t.name}
+  }
 end
 
 rule '.html' => '.adoc' do |t|
